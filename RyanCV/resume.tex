@@ -1,0 +1,106 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Themes: Awesome-CV
+\documentclass[11pt, a4paper]{awesome-cv}
+
+%%% Override a directory location for fonts(default: 'fonts/')
+\fontdir[fonts/]
+
+%%% Configure a directory location for sections
+\newcommand*{\sectiondir}{resume/}
+
+%%% Override color
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+%% Color for highlight
+% Define your custom color if you don't like awesome colors
+%\colorlet{awesome}{awesome-skyblue}
+%\definecolor{awesome}{HTML}{CA63A8}
+%% Colors for text
+%\definecolor{darktext}{HTML}{414141}
+%\definecolor{text}{HTML}{414141}
+%\definecolor{graytext}{HTML}{414141}
+%\definecolor{lighttext}{HTML}{414141}
+
+%%% Override a separator for social informations in header(default: ' | ')
+%\headersocialsep[\quad\textbar\quad]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     3rd party packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Needed to divide into several files
+\usepackage{import}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Personal Data
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Essentials
+\name{RYAN }{ }{VASS}
+\address{615 S. Hancock St. Philadelphia, PA 19147}
+\mobile{(610) 716 1602} 
+%%% Social
+\linkedin{https://www.linkedin.com/in/ryanvass}
+\email{ryan.vass@gmail.com}
+%\github{rv816}
+%%% Optionals
+\position{Physician Executive with Expertise in informatics and value-based care.}
+%%\quote{``Make the change that you want to see in the world."}
+
+\newenvironment{changemargin}[2]{%
+\begin{list}{}{%
+\setlength{\leftmargin}{#1}%
+\setlength{\rightmargin}{#2}%
+}%
+\item[]}
+{\end{list}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Make a footer for CV with three arguments(<left>, <center>, <right>)
+\usepackage{parskip}
+
+\begin{document}
+%%% Make a header for CV with personal data
+%\makecvheader
+\begin{changemargin}{-1.5em}{0em}
+\begin{tabular*}{\textwidth}{L{10.6cm}R{6.3cm}}
+{\hspace{-0.6em}{\headerlastnamestyle{RYAN }\headerdegreestyle{VASS} & \fontsize{12pt}{1em}\bodyfont\color{awesomer}{healthcare leader with expertise in value-based care + data science}
+\end{tabular*}
+\vspace{0.2cm}
+
+{\fontsize{11pt}{1em}\bodyfontlight{615 S. Hancock St. Philadelphia, PA 19147    \vhrulefilltop{0.9pt} \\610.716-1602 |  ryan.vass@gmail.com  |  linkedin.com/in/ryanvass}}
+\end{changemargin}
+
+
+%%% Import contents
+\hfill
+\import{\sectiondir}{intro.tex}
+\import{\sectiondir}{experience.tex}
+\import{\sectiondir}{education.tex}
+%%\vspace{-.2cm}
+%\break
+\import{\sectiondir}{publications.tex}
+\import{\sectiondir}{committees.tex}
+\import{\sectiondir}{skills.tex}
+
+
+\end{document}
